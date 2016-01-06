@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
-ruby '2.3.0'
+ruby '2.2.3'
 
 gem 'rails', '4.2.5'
-gem 'pg'
+gem 'mysql2'
+#gem 'pg'
 gem 'figaro'
 gem 'jbuilder', '~> 2.0'
 gem 'devise'

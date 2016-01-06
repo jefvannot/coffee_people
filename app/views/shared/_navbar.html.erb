@@ -1,18 +1,25 @@
 <nav class="navbar-wagon">
+  <header class="regular-header clearfix hide-sm" role="banner">
   <div class="container navbar-wagon-container">
 
-    <a href="">
+
+<!--     <a href="">
       <%= image_tag "logo.png", class: "navbar-wagon-logo" %>
     </a>
+ -->
+    <div class="logo">
+      <a href="">CoffeePeople</a>
+    </div>
 
     <div class="navbar-wagon-pusher"></div>
 
-    <form action="" class="navbar-wagon-search hidden-xs hidden-sm">
+<!--     <form action="" class="navbar-wagon-search hidden-xs hidden-sm">
       <input type="text" class="navbar-wagon-search-input" placeholder="Search something">
       <button type="submit" class="navbar-wagon-search-btn">
         <i class="fa fa-search"></i>
       </button>
     </form>
+-->
     <hr class="hidden-xs hidden-sm">
     <% if user_signed_in? %>
       <%= link_to "#", class: "navbar-wagon-item navbar-wagon-link hidden-xs" do %>
@@ -49,5 +56,40 @@
     <% end %>
     <hr>
     <%= link_to t(".top_call_to_action", default: "Post stuff"), "#", class: "navbar-wagon-item navbar-wagon-button btn" %>
-  </div>
+
+
+
+        <div class="nav pull-right help-menu list-unstyled">
+          <li class="list-your-space pull-left">
+<!--        <a class="btn white-btn" href="./cv-form.php">
+              Publiez une annonce
+            </a> -->
+            <a type="button" class="btn white-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Publier
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="./cv-form.php">Un CV</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="./cv-form-pro.php">Une annonce</a></li>
+            </ul>
+          </li>
+<!--           <li class="list-your-space pull-left">
+            <a class="btn white-btn" href="./cv-form-pro.php">
+              Publiez votre offre
+            </a>
+          </li>
+ -->          <li class="pull-left">
+            <a class="btn naked-btn" type="button" data-toggle="modal" data-target="#logInModal">
+              Se connecter
+            </a>
+          </li>
+          <li class="pull-left">
+            <a class="btn naked-btn" type="button" data-toggle="modal" data-target="#signInModal">
+              S'inscrire
+            </a>
+          </li>
+        </div>
+    </div>
+    </header>
+
 </nav>
