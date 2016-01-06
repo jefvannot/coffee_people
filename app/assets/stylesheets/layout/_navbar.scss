@@ -168,7 +168,7 @@ header {
 /******* Apply Modal **********/
 
 .modal {
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #27898A;
   background-color: rgba(41, 41, 41, 0.74);
   .modal-center {
@@ -181,9 +181,16 @@ header {
     width: 300px;
     margin: auto;
   }
-  p {
+  h2 {
+    display: none;
+  }
+  p, a {
+    color: #27898A;
     margin-top: 10px;
     margin-bottom: 0px;
+  }
+  &-body {
+    padding: 20px;
   }
 /*.modal-content {
   background-color: rgba(16, 16, 16, 0.80);
@@ -199,35 +206,35 @@ header {
 */
   &-inner {
     background-color: white;
-        border-radius: 4px;
-    max-width: 300px;
+    border-radius: 4px;
+    min-width: 300px;
     margin: auto;
     flex: 1;
   }
-  &-header {
-    border-bottom: none;
-  }
-  &-subtitle {
-    color: $red;
-    line-height: 1.4em;
-  }
-  &-footer {
-    border-top: none;
-  }
+  // &-header {
+  //   border-bottom: none;
+  // }
+  // &-subtitle {
+  //   color: $red;
+  //   line-height: 1.4em;
+  // }
+  // &-footer {
+  //   border-top: none;
+  // }
   .field-container {
     margin: 0px 0px 20px 0px;
   }
-  .name .field {
-    width: 48%;
-    float: left;
-    font-size: 11px;
-    font-weight: 100;
-  }
-  .field-title {
-    font-size: 16px;
-    font-weight: 400;
-    margin-bottom: 7px;
-  }
+  // .name .field {
+  //   width: 48%;
+  //   float: left;
+  //   font-size: 11px;
+  //   font-weight: 100;
+  // }
+  // .field-title {
+  //   font-size: 16px;
+  //   font-weight: 400;
+  //   margin-bottom: 7px;
+  // }
   .form-inline .form-control {
     font-weight: 400;
     display: block;
@@ -243,26 +250,64 @@ header {
   &-header .close {
     outline: none;
   }
-  label {
-    font-weight: 100;
-    width: 100%;
-    margin-bottom: 0;
-  }
-  label p {
-      margin: 10px 0 0 0;
-      font-size: 1em;
+  // label {
+  //   font-weight: 100;
+  //   width: 100%;
+  //   margin-bottom: 0;
+  // }
+  // label p {
+  //     margin: 10px 0 0 0;
+  //     font-size: 1em;
+  //   }
+  // .btn-submit {
+  //   width: 100%;
+  //   height: 42px;
+  //   border-radius: 4px;
+  //   border: 1px solid;
+  //   color: white;
+  //   font-size: 16px;
+  //   font-weight: bolder;
+  //   background-color: #27898A;
+  // }
+
+  .form-group {
+    margin-bottom: 10px;
+    .email, .password {
+      margin: 0px 0px 20px 0px;
     }
-  .btn-submit {
-    width: 100%;
-    height: 42px;
-    border-radius: 4px;
-    border: 1px solid;
-    color: white;
-    font-size: 16px;
-    font-weight: bolder;
-    background-color: #27898A;
+  }
+  .form-inputs .form-control {
+    font-weight: 400;
+      display: block;
+      width: 100%;
+      font-size: 14px;
+      height: 42px;
+  }
+  .form-actions input {
+      width: 100%;
+      height: 42px;
+      border-radius: 4px;
+      border: 1px solid;
+      color: white;
+      font-size: 16px;
+      font-weight: bolder;
+      background-color: #27898A;
+  }
+  .links-container {
+    margin-top: 5px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 .nav>li>a {
     position: relative;

@@ -102,29 +102,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <div class="nav pull-right help-menu list-unstyled">
 
 
@@ -170,9 +147,6 @@
   </li>
 
 
-
-
-
 <!--
           <li class="pull-left">
             <a class="btn naked-btn" type="button" data-toggle="modal" data-target="#logInModal">
@@ -203,6 +177,26 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Modal -->
 <div class="modal fade" id="logInModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-center">
@@ -214,15 +208,19 @@
         <h5 class="modal-title" id="myModalLabel"></h5>
       </div>
  -->
+
       <div class="modal-body">
-        <form action="" method="post" name="" class="validate form-inline" target="_blank" novalidate>
+
+        <%= render "devise/shared/sessionnew.html.erb" %>
+        <%= render "devise/shared/links" %>
+
+
+<!--         <form action="" method="post" name="" class="validate form-inline" target="_blank" novalidate>
 
           <div class="email field-container required">
-            <!-- <label class="field-title required">Adresse e-mail</label> -->
             <input name="email" type="email" placeholder="Adresse e-mail" spellcheck="false" class="decorative-input grey-bg form-control" required>
           </div>
           <div class="m-d-p field-container required">
-            <!-- <label class="field-title required">Adresse e-mail</label> -->
             <input name="password" type="password" placeholder="Mot de passe" spellcheck="false" class="decorative-input grey-bg form-control" required>
           </div>
           <div aria-hidden="true"></div>
@@ -233,6 +231,8 @@
               S'inscrire
             </a>
         </p>
+ -->
+
       </div>
     </div>
     </div>
