@@ -121,13 +121,16 @@
 }
 
 #header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: rgba(0,0,0,0);
   position: absolute;
   z-index: 33;
-  display: block;
   width: 100%;
   /*    background-color: #27898A;*/
   height: 70px;
+  padding: 0px 10px;
 }
 header {
   height: 100%;
@@ -135,14 +138,16 @@ header {
 .head-wrapper-content .h4 {
   font-weight: normal;
 }
-.logo a {
+.logo {
+  flex: 1;
+  a {
   text-transform: uppercase;
-  margin-left: 78px;
-  margin-top: 22px;
+  margin-left: 68px;
   float: left;
   color: white;
   font-weight: bold;
   font-size: 15px;
+  }
   a:hover {
     text-decoration: none;
   }
@@ -316,6 +321,9 @@ header {
 }
 
 .nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   .white-btn:focus, .nav .white-btn:hover {
     text-decoration: none;
     background-color: rgba(0, 0, 0, 0.6);
@@ -326,7 +334,6 @@ header {
     display: block;
     padding: 5px 20px;
     margin-right: 10px;
-    margin-top: 12px;
     background: none;
     /*text-transform: uppercase;*/
     font-size: 16px;
@@ -341,7 +348,6 @@ header {
     display: block;
     padding: 5px 20px;
     margin-right: 0px;
-    margin-top: 12px;
     background: none;
     /*text-transform: uppercase;*/
     font-size: 16px;

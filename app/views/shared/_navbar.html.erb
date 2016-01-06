@@ -62,14 +62,35 @@
 
     <div class="nav pull-right help-menu list-unstyled">
 
+      <li class="list-your-space pull-left">
+        <a type="button" class="btn white-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Publier
+        </a>
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+<!--           <li><a href="./cv-form.php">Un CV</a></li>
+          <li><a href="./cv-form-pro.php">Une annonce</a></li>
+        -->          <li>
+        <%= link_to "#" do %>
+        <!-- <i class="fa fa-user"></i>  -->
+        <%= t ".cv", default: "Un CV" %>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to "#" do %>
+        <!-- <i class="fa fa-home"></i>   -->
+        <%= t ".job", default: "Une annonce" %>
+        <% end %>
+      </li>
+    </ul>
+  </li>
 
-      <li class="pull-left">
-        <% if user_signed_in? %>
-        <div class="navbar-wagon-item pull-left">
-          <div class="dropdown">
-            <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-            <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-              <li>
+  <li class="pull-left">
+    <% if user_signed_in? %>
+    <div class="navbar-wagon-item pull-left">
+      <div class="dropdown">
+        <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+<!--               <li>
                 <%= link_to "#" do %>
                 <i class="fa fa-user"></i> <%= t ".profile", default: "Profil" %>
                 <% end %>
@@ -79,41 +100,22 @@
                 <i class="fa fa-home"></i>  <%= t ".profile", default: "Acceuil" %>
                 <% end %>
               </li>
-              <li>
-                <%= link_to destroy_user_session_path, method: :delete do %>
-                <i class="fa fa-sign-out"></i>  <%= t ".sign_out", default: "Déconnection" %>
-                <% end %>
-              </li>
-            </ul>
-          </div>
+            -->
+            <li>
+              <%= link_to destroy_user_session_path, method: :delete do %>
+              <i class="fa fa-sign-out"></i>  <%= t ".sign_out", default: "Déconnection" %>
+              <% end %>
+            </li>
+          </ul>
         </div>
-        <% else %>
-        <%= link_to "Se connecter", "#logInModal", :class => "btn naked-btn", "data-toggle" => "modal" %>
-        <% end %>
-      </li>
+      </div>
+      <% else %>
+      <%= link_to "Se connecter", "#logInModal", :class => "btn naked-btn", "data-toggle" => "modal" %>
+      <% end %>
+    </li>
 
 
-      <li class="list-your-space pull-left">
-        <a type="button" class="btn white-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-          Publier
-        </a>
-        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-<!--           <li><a href="./cv-form.php">Un CV</a></li>
-          <li><a href="./cv-form-pro.php">Une annonce</a></li>
- -->          <li>
-            <%= link_to "#" do %>
-            <!-- <i class="fa fa-user"></i>  -->
-            <%= t ".cv", default: "Un CV" %>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to "#" do %>
-            <!-- <i class="fa fa-home"></i>   -->
-            <%= t ".job", default: "Une annonce" %>
-            <% end %>
-          </li>
-        </ul>
-      </li>
+
 
   <!--
           <li class="pull-left">
