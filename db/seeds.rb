@@ -7,6 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Cv.destroy_all
+Job.destroy_all
 
 
 Cv.create!({
@@ -18,7 +19,7 @@ Cv.create!({
   experience: "Confirmé",
   start_date: "2016-01-01",
   comment: "super content"
-})
+  })
 Cv.create!({
   job: "Barista",
   first_name: "Cheri",
@@ -28,7 +29,7 @@ Cv.create!({
   experience: "Confirmé",
   start_date: "2016-01-01",
   comment: "super mini"
-})
+  })
 Cv.create!({
   job: "Patissier",
   first_name: "touk",
@@ -38,4 +39,36 @@ Cv.create!({
   experience: "Débutant",
   start_date: "2016-01-01",
   comment: "super content"
-})
+  })
+
+Job.create!({
+  firm_name: "fourchette",
+  firm_type: "coffee shop",
+  firm_email: "pv@gmail.com",
+  proposed_job: "Cuisinier",
+  alternativ_job: "Cuisinier",
+  job_city: "Paris",
+  job_start_date: "2016-01-01",
+  comment: "super"
+  })
+Job.create!({
+  firm_name: "couteau",
+  firm_type: "hotel",
+  firm_email: "pv@gmail.com",
+  proposed_job: "Barista",
+  alternativ_job: "Cuisinier",
+  job_city: "Paris",
+  job_start_date: "2016-01-01",
+  comment: "super super"
+  })
+Job.create!({
+  firm_name: "cuillere",
+  firm_type: "resto",
+  firm_email: "pv@gmail.com",
+  proposed_job: "Barista",
+  alternativ_job: "Cuisinier",
+  job_city: "Paris",
+  job_start_date: "2016-01-01",
+  comment: "super super super"
+  })
+

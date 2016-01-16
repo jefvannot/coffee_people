@@ -6,10 +6,10 @@ class CreateJobs < ActiveRecord::Migration
       t.string :firm_type
       t.string :firm_email
       t.string :proposed_job
-      t.string :alternativ_jobjob_city
+      t.string :alternativ_job
+      t.string :job_city
       t.string :job_start_date
       t.string :comment
-      t.string :offer_issue
 
       t.timestamps null: false
     end
