@@ -1,95 +1,249 @@
-<nav class="navbar-wagon">
-  <header class="regular-header clearfix hide-sm" role="banner">
-  <div class="container navbar-wagon-container">
+<nav class="">
 
-
-<!--     <a href="">
+<!--      <a href="">
       <%= image_tag "logo.png", class: "navbar-wagon-logo" %>
     </a>
- -->
-    <div class="logo">
-      <a href="">CoffeePeople</a>
-    </div>
 
-    <div class="navbar-wagon-pusher"></div>
 
-<!--     <form action="" class="navbar-wagon-search hidden-xs hidden-sm">
-      <input type="text" class="navbar-wagon-search-input" placeholder="Search something">
-      <button type="submit" class="navbar-wagon-search-btn">
-        <i class="fa fa-search"></i>
-      </button>
-    </form>
--->
-    <hr class="hidden-xs hidden-sm">
+
+    <div class="navbar-wagon-pusher"></div>x
+
     <% if user_signed_in? %>
-      <%= link_to "#", class: "navbar-wagon-item navbar-wagon-link hidden-xs" do %>
-        <div class="icon-badge-container">
-          <i class="fa fa-envelope-o"></i>
-          <div class="icon-badge icon-badge-blue">3</div>
-        </div>
-      <% end %>
-      <hr>
       <div class="navbar-wagon-item">
         <div class="dropdown">
           <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <%= link_to "#" do %>
-                <i class="fa fa-user"></i> <%= t ".profile", default: "Profile" %>
+                <i class="fa fa-user"></i> <%= t ".profile", default: "Profil" %>
               <% end %>
             </li>
             <li>
               <%= link_to "#" do %>
-                <i class="fa fa-home"></i>  <%= t ".profile", default: "Home" %>
+                <i class="fa fa-home"></i>  <%= t ".profile", default: "Acceuil" %>
               <% end %>
             </li>
             <li>
               <%= link_to destroy_user_session_path, method: :delete do %>
-                <i class="fa fa-sign-out"></i>  <%= t ".sign_out", default: "Log out" %>
+                <i class="fa fa-sign-out"></i>  <%= t ".sign_out", default: "Déconnection" %>
               <% end %>
             </li>
           </ul>
         </div>
       </div>
     <% else %>
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to t(".sign_in", default: "Connection"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% end %>
-    <hr>
+ --><!--     <hr>
     <%= link_to t(".top_call_to_action", default: "Post stuff"), "#", class: "navbar-wagon-item navbar-wagon-button btn" %>
+  -->
 
 
 
-        <div class="nav pull-right help-menu list-unstyled">
-          <li class="list-your-space pull-left">
-<!--        <a class="btn white-btn" href="./cv-form.php">
-              Publiez une annonce
-            </a> -->
-            <a type="button" class="btn white-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-              Publier
-            </a>
-            <ul class="dropdown-menu">
-              <li><a href="./cv-form.php">Un CV</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="./cv-form-pro.php">Une annonce</a></li>
-            </ul>
-          </li>
-<!--           <li class="list-your-space pull-left">
-            <a class="btn white-btn" href="./cv-form-pro.php">
-              Publiez votre offre
-            </a>
-          </li>
- -->          <li class="pull-left">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <header id="header" class="regular-header clearfix hide-sm" role="banner">
+    <div class="logo">
+      <a href="">CoffeePeople</a>
+    </div>
+
+
+    <div class="nav pull-right help-menu list-unstyled">
+
+      <li class="list-your-space pull-left">
+        <a type="button" class="btn white-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Publier
+        </a>
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+<!--           <li><a href="./cv-form.php">Un CV</a></li>
+          <li><a href="./cv-form-pro.php">Une annonce</a></li>
+        -->          <li>
+        <%= link_to "#" do %>
+        <!-- <i class="fa fa-user"></i>  -->
+        <%= t ".cv", default: "Un CV" %>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to "#" do %>
+        <!-- <i class="fa fa-home"></i>   -->
+        <%= t ".job", default: "Une annonce" %>
+        <% end %>
+      </li>
+    </ul>
+  </li>
+
+  <li class="pull-left">
+    <% if user_signed_in? %>
+    <div class="navbar-wagon-item pull-left">
+      <div class="dropdown">
+        <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+<!--               <li>
+                <%= link_to "#" do %>
+                <i class="fa fa-user"></i> <%= t ".profile", default: "Profil" %>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to "#" do %>
+                <i class="fa fa-home"></i>  <%= t ".profile", default: "Acceuil" %>
+                <% end %>
+              </li>
+            -->
+            <li>
+              <%= link_to destroy_user_session_path, method: :delete do %>
+              <i class="fa fa-sign-out"></i>  <%= t ".sign_out", default: "Déconnection" %>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <% else %>
+      <%= link_to "Se connecter", "#logInModal", :class => "btn naked-btn", "data-toggle" => "modal" %>
+      <% end %>
+    </li>
+
+
+
+
+  <!--
+          <li class="pull-left">
             <a class="btn naked-btn" type="button" data-toggle="modal" data-target="#logInModal">
               Se connecter
             </a>
           </li>
-          <li class="pull-left">
+           <li class="pull-left">
             <a class="btn naked-btn" type="button" data-toggle="modal" data-target="#signInModal">
               S'inscrire
             </a>
           </li>
-        </div>
-    </div>
+        -->
+
+
+
+      </div>
+
     </header>
 
-</nav>
+
+
+
+
+
+
+  </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="logInModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-center">
+      <div class="modal-content grey-bg">
+        <div class="modal-inner">
+
+<!--       <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h5 class="modal-title" id="myModalLabel"></h5>
+      </div>
+    -->
+
+    <div class="modal-body">
+
+      <%= render "devise/shared/new" %>
+      <%= render "devise/shared/links" %>
+
+
+<!--         <form action="" method="post" name="" class="validate form-inline" target="_blank" novalidate>
+
+          <div class="email field-container required">
+            <input name="email" type="email" placeholder="Adresse e-mail" spellcheck="false" class="decorative-input grey-bg form-control" required>
+          </div>
+          <div class="m-d-p field-container required">
+            <input name="password" type="password" placeholder="Mot de passe" spellcheck="false" class="decorative-input grey-bg form-control" required>
+          </div>
+          <div aria-hidden="true"></div>
+          <input type="submit" value="Connection" name="subscribe" id="" class="btn-submit">
+        </form>
+        <p>Vous n'avez pas de compte ?
+          <a type="button" data-toggle="modal" data-target="#signInModal" data-dismiss="modal">
+              S'inscrire
+            </a>
+        </p>
+      -->
+
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+<div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-center">
+    <div class="modal-content grey-bg">
+      <div class="modal-inner">
+
+<!--       <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h5 class="modal-title" id="myModalLabel"></h5>
+      </div>
+    -->
+    <div class="modal-body">
+      <form action="" method="post" name="" class="validate form-inline" target="_blank" novalidate>
+
+        <div class="name field-container required">
+          <!-- <div class="field-title required">Nom</div> -->
+          <div class="">
+            <label class="">
+              <input type="text" class="decorative-input form-control right box" placeholder="Nom" name="first_name" onsubmit="ft_verif_filled(this)">
+            </label>
+          </div>
+        </div>
+        <div class="email field-container required">
+          <!-- <label class="field-title required">Adresse e-mail</label> -->
+          <input name="email" type="email" placeholder="Adresse e-mail" spellcheck="false" class="decorative-input grey-bg form-control" required>
+        </div>
+        <div class="m-d-p field-container required">
+          <!-- <label class="field-title required">Adresse e-mail</label> -->
+          <input name="password" type="password" placeholder="Mot de passe" spellcheck="false" class="decorative-input grey-bg form-control" required>
+        </div>
+        <div aria-hidden="true"></div>
+        <input type="submit" value="Inscription" name="subscribe" id="" class="btn-submit">
+      </form>
+      <p>Vous êtes déjà membre ?
+        <a type="button" data-toggle="modal" data-target="#logInModal" data-dismiss="modal">
+          <!-- <a href="/login" class="" data-modal-href="/logInModal" data-modal-type="login"> -->
+
+          Se connecter</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+

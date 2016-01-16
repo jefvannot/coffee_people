@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
+  get 'pages/home'
+
   devise_for :users
-  #root to: 'pages#home'
-  root to: "cvs#index"
+  root to: 'pages#home'
 
 
-  resources :cvs, only: [ :index, :show ]
-  resources :jobs, only: [ :index, :show ]
+  resources :cvs
+  resources :jobs
 
 
   # The priority is based upon order of creation: first created -> highest priority.
