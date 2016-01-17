@@ -1,5 +1,8 @@
+<h1>Tous les cvs</h1>
 
 <% @cvs.each do |cv| %>
-  <h2><%= cv.name %></h2>
-  <p><%= cv.address %></p>
+  <h2><%= cv.first_name %></h2>
+  <p><%= cv.job %></p>
 <% end %>
+
+

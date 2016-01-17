@@ -1,0 +1,7 @@
+<%= simple_form_for @cvs, url: cvs_path, method: :post, class: 'form-control' do |f| %>
+      <%= f.input :first_name, placeholder: 'Votre Prénom', label: false, input_html: { class: 'form-control right box' } %>
+      <%= f.input :last_name, placeholder: 'Votre nom', label: false, input_html: { class: 'form-control right box' } %>
+      <%= f.input :email, as: :email, placeholder: 'Votre email', label: false, input_html: { class: 'form-control right box' } %>
+      <%= f.input :job, as: :text, placeholder: 'Job', label: false, input_html: { class: 'form-control right box' }  %>
+      <%= f.button :submit, 'Envoyer', class: "btn btn-success" %>
+    <% end %>

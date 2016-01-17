@@ -2,7 +2,7 @@ class CvsController < ApplicationController
 before_action :set_cv, only: [:show, :edit, :update, :destroy]
 
   def index
-    @cv = Cv.all
+    @cvs = Cv.all
   end
 
   def show
