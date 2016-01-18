@@ -33,10 +33,10 @@ ActiveRecord::Schema.define(version: 20160105221627) do
     t.string   "firm_type",              limit: 255
     t.string   "firm_email",             limit: 255
     t.string   "proposed_job",           limit: 255
-    t.string   "alternativ_jobjob_city", limit: 255
+    t.string   "alternativ_job",         limit: 255
+    t.string   "job_city",               limit: 255
     t.string   "job_start_date",         limit: 255
     t.string   "comment",                limit: 255
-    t.string   "offer_issue",            limit: 255
     t.datetime "created_at",                         null: false
     t.datetime "updated_at",                         null: false
   end

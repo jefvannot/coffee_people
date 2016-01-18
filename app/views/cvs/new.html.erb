@@ -1,0 +1,12 @@
+<h1>Postez votre cv</h1>
+
+<%= simple_form_for @cv, url: cvs_path, method: :post, class: 'form-control' do |f| %>
+  <%= f.input :first_name, placeholder: 'Votre Prénom', label: false, input_html: { class: 'form-control right box' } %>
+  <%= f.input :last_name, placeholder: 'Votre nom', label: false, input_html: { class: 'form-control right box' } %>
+  <%= f.input :email, as: :email, placeholder: 'Votre email', label: false, input_html: { class: 'form-control right box' } %>
+  <%= f.input :job, as: :text, placeholder: 'Job', label: false, input_html: { class: 'form-control right box' }  %>
+  <%= f.input :city, as: :text, placeholder: 'Votre Ville', label: false, input_html: { class: 'form-control right box' }  %>
+  <%= f.input :experience, as: :text, placeholder: 'Expérience', label: false, input_html: { class: 'form-control right box' }  %>
+  <%= f.input :comment, as: :text, placeholder: 'Dites nous en un peu plus...', label: false, input_html: { class: 'form-control right box' }  %>
+  <%= f.button :submit, 'Envoyer', class: "btn btn-success" %>
+<% end %>
