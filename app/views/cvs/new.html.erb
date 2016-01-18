@@ -1,12 +1,52 @@
-<h1>Postez votre cv</h1>
 
-<%= simple_form_for @cv, url: cvs_path, method: :post, class: 'form-control' do |f| %>
-  <%= f.input :first_name, placeholder: 'Votre Prénom', label: false, input_html: { class: 'form-control right box' } %>
-  <%= f.input :last_name, placeholder: 'Votre nom', label: false, input_html: { class: 'form-control right box' } %>
-  <%= f.input :email, as: :email, placeholder: 'Votre email', label: false, input_html: { class: 'form-control right box' } %>
-  <%= f.input :job, as: :text, placeholder: 'Job', label: false, input_html: { class: 'form-control right box' }  %>
-  <%= f.input :city, as: :text, placeholder: 'Votre Ville', label: false, input_html: { class: 'form-control right box' }  %>
-  <%= f.input :experience, as: :text, placeholder: 'Expérience', label: false, input_html: { class: 'form-control right box' }  %>
-  <%= f.input :comment, as: :text, placeholder: 'Dites nous en un peu plus...', label: false, input_html: { class: 'form-control right box' }  %>
-  <%= f.button :submit, 'Envoyer', class: "btn btn-success" %>
-<% end %>
+<div id="page">
+
+  <div class="columns-container">
+    <div id="columns" class="">
+      <div class="row profile">
+
+        <div id="center_column" class="center_column col-xs-12 col-sm-12">
+
+          <div class="primary_block row">
+
+            <div class="page-container">
+
+              <div class="page-title-container">
+                <div class="page-title show-phone"><span>Déposez ici votre CV</span></div>
+              </div>
+
+              <div class="page-img-container">
+                <%= image_tag ('cafe_creme.jpg'), class: 'page-img' %>
+              </div>
+
+              <div class="page-content-container">
+
+                <div class="form-title-container hide-phone">
+                  <div class="form-title"><span>Déposez ici votre CV</span></div>
+                </div>
+                <div class="form_ko_container" id="k_o" onsubmit="ft_show_ko(this)">
+                  <div class="form_title" id="ko_inner"></div>
+                </div>
+
+                <div id="cv_form" class="cv_form">
+
+                  <%= simple_form_for @cv, url: cvs_path, method: :post, class: 'form-control' do |f| %>
+                  <%= f.input :first_name, placeholder: 'Votre Prénom', label: false, input_html: { class: 'form-control right box' } %>
+                  <%= f.input :last_name, placeholder: 'Votre nom', label: false, input_html: { class: 'form-control right box' } %>
+                  <%= f.input :email, as: :email, placeholder: 'Votre email', label: false, input_html: { class: 'form-control right box' } %>
+                  <%= f.input :job, as: :text, placeholder: 'Job', label: false, input_html: { class: 'form-control right box' }  %>
+                  <%= f.input :city, as: :text, placeholder: 'Votre Ville', label: false, input_html: { class: 'form-control right box' }  %>
+                  <%= f.input :experience, as: :text, placeholder: 'Expérience', label: false, input_html: { class: 'form-control right box' }  %>
+                  <%= f.input :comment, as: :text, placeholder: 'Dites nous en un peu plus...', label: false, input_html: { class: 'form-control right box' }  %>
+                  <%= f.button :submit, 'Envoyer', class: "btn btn-success" %>
+                  <% end %>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
