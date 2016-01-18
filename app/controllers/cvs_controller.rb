@@ -15,7 +15,7 @@ before_action :set_cv, only: [:show, :edit, :update, :destroy]
   def create        # POST /cvs
     @cv = Cv.new(cv_params)
     if @cv.save
-      redirect_to cvs_path
+      redirect_to root_path
     else
       render :new
     end

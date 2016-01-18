@@ -1,7 +1,5 @@
 <h1>Tous les cvs</h1>
 
-
-
   <div class="container">
     <div class="row">
 
@@ -16,7 +14,15 @@
             <p><%= cv.city %></p>
           </div>
           <div class="card-user">
-            <img src="http://placehold.it/50x50" class="avatar avatar-bordered"/>
+          <% if cv.job == 'barista' %>
+            <%= image_tag ('barista_icon.png'), class: 'avatar avatar-bordered job_icon' %>
+          <% end %>
+          <% if cv.job == 'cuisiner' %>
+            <%= image_tag ('cuisiner_icon.png'), class: 'avatar avatar-bordered job_icon' %>
+          <% end %>
+          <% if cv.job == 'patissier' %>
+            <%= image_tag ('patissier_icon.png'), class: 'avatar avatar-bordered job_icon' %>
+          <% end %>
           </div>
           <a href="#" class="card-link"></a>
         </div>
@@ -25,3 +31,4 @@
 
     </div>
   </div>
+

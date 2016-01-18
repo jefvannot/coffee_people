@@ -11,7 +11,7 @@ Job.destroy_all
 
 
 Cv.create!({
-  job: "Cuisinier",
+  job: "cuisinier",
   first_name: "Paul",
   last_name: "Verlaine",
   email: "pv@gmail.com",
@@ -21,7 +21,7 @@ Cv.create!({
   comment: "super content"
   })
 Cv.create!({
-  job: "Barista",
+  job: "barista",
   first_name: "Cheri",
   last_name: "Mini",
   email: "cm@gmail.com",
@@ -31,7 +31,7 @@ Cv.create!({
   comment: "super mini"
   })
 Cv.create!({
-  job: "Patissier",
+  job: "patissier",
   first_name: "touk",
   last_name: "Touk",
   email: "tt@gmail.com",

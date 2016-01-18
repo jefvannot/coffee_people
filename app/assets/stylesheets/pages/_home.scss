@@ -7,122 +7,122 @@
 
  /***** head-wrapper *****/
 
-.head-img-wrapper {
-    top: 0;
-    bottom: 0;
-    overflow: hidden;
-    position: absolute;
-    width: 100%;
+ .head-img-wrapper {
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
 }
 
 .head-wrapper-content .h4 {
-    font-weight: normal;
+  font-weight: normal;
 }
 
 
 .va-container-v {
-    height: 100%;
-    width: 100%;
-    padding-top: 80px;
-    padding-bottom: 80px;
+  height: 100%;
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .va-container {
-    display: table;
-    position: relative;
+  display: table;
+  position: relative;
 }
 
 
 
 .post-your-cv-btn {
-    background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255,255,255,0.5);
 }
 
 .head-wrapper {
-    height: 580px;
-    position: relative;
+  height: 580px;
+  position: relative;
 }
 
-    /** head-text **/
+/** head-text **/
 
 .head-wrapper-content {
-    height: 300px;
-    padding-bottom: 0px;
-    position: relative;
-    z-index: 2;
-    top: 50px;
+  height: 300px;
+  padding-bottom: 0px;
+  position: relative;
+  z-index: 2;
+  top: 50px;
 }
 
 .text_header {
-    text-align: left;
-    padding: 30px 50px;
-    width: 60%;
-    max-width: 755px;
-    background-color: rgba(0, 0, 0, 0.3);
+  text-align: left;
+  padding: 30px 50px;
+  width: 60%;
+  max-width: 755px;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .text-branding {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 .h4 {
-    font-size: 20px;
+  font-size: 20px;
 }
 
-    /** head-wrapper footer **/
+/** head-wrapper footer **/
 
 .head-wrapper-footer {
-    background-color: none !important;
+  background-color: none !important;
 }
 
 .head-wrapper-footer {
-    bottom: 0;
-    left: 0;
-    padding-bottom: 30px;
-    padding-top: 30px;
-    position: absolute;
-    right: 0;
+  bottom: 0;
+  left: 0;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  position: absolute;
+  right: 0;
 }
 
 
-    /** triple bar search **/
+/** triple bar search **/
 
 .tri-search-bar {
-    vertical-align: middle;
-    display: inline-block;
+  vertical-align: middle;
+  display: inline-block;
 }
 
 .tri-search-bar button {
-    margin-left: -3px;
-    margin-right: -3px;
-    /*border-radius: 30px;*/
-    border-color: #F5F5F5;
-    border-style: solid;
-    height: 40px;
-    border-width: 1px;
-    width: 173px;
-    outline: 0;
-    position: relative;
-    z-index: 3;
+  margin-left: -3px;
+  margin-right: -3px;
+  /*border-radius: 30px;*/
+  border-color: #F5F5F5;
+  border-style: solid;
+  height: 40px;
+  border-width: 1px;
+  width: 173px;
+  outline: 0;
+  position: relative;
+  z-index: 3;
 }
 
 .tri-search-bar button:hover {
-    z-index: 4;
-    border-color: #fff;
-    color: #fff;
-    outline: 0;
+  z-index: 4;
+  border-color: #fff;
+  color: #fff;
+  outline: 0;
 }
 
 .tri-search-bar .btn-dbl,
 .tri-search-bar .btn-middle {
-    border-radius: 0;
-    background-color: #27898A;
-    color: #fff;
+  border-radius: 0;
+  background-color: #27898A;
+  color: #fff;
 }
 
 .tri-search-bar .btn-dbl:hover,
 .tri-search-bar .btn-middle:hover {
-    background-color: #0C494A;
+  background-color: #0C494A;
 
 }
 .tri-search-bar .btn-dbl:visited,
@@ -133,46 +133,46 @@
 .tri-search-bar .btn-middle:focus,
 .tri-search-bar .btn-middle:active,
 .tri-search-bar .btn-middle:focus:hover
- {
-    z-index: 4;
-    border: solid 2px;
-    border-color: #fff;
-    background-color: #0C494A;
-    color: #fff;
-    outline: 0;
+{
+  z-index: 4;
+  border: solid 2px;
+  border-color: #fff;
+  background-color: #0C494A;
+  color: #fff;
+  outline: 0;
 }
 
 .btn-left {
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
 }
 
 .btn-right {
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
 .btn-grey {
-    background-color: #545454;
-    color: #FFF;
+  background-color: #545454;
+  color: #FFF;
 }
 
 .tri-search-bar .btn-grey:hover {
-    border-color: #fff;
-    background-color: #303030;
+  border-color: #fff;
+  background-color: #303030;
 }
 
 .tri-search-bar .btn-grey:visited,
 .tri-search-bar .btn-grey:focus,
 .tri-search-bar .btn-grey:active,
 .tri-search-bar .btn-grey:focus:hover
- {
-    z-index: 4;
-    border: solid 2px;
-    background-color: #232323;
-    border-color: #fff;
-    color: #fff;
-    outline: 0;
+{
+  z-index: 4;
+  border: solid 2px;
+  background-color: #232323;
+  border-color: #fff;
+  color: #fff;
+  outline: 0;
 }
 
 
@@ -190,8 +190,7 @@
   background-size: cover !important;
   color: white;
   position: relative;
-      margin: 16px 0px;
-
+  margin: 16px 0px;
 }
 .card-category {
   font-size: 10px;
@@ -227,6 +226,13 @@
   &:hover{
     opacity: 0.1;
   }
+
+  .job_icon {
+    background-color: $brand-color;
+    height: 50px;
+    border-radius: 30px;
+    border: solid 2px;
+  }
 }
 
 
@@ -250,29 +256,29 @@
 
 
 @media (max-width: 767px) {
-    .tri-search-bar button {
-        font-size: 14px;
-    }
+  .tri-search-bar button {
+    font-size: 14px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1099px) {
-    .head-wrapper {
-        height: 550px;
-    }
-    .tri-search-bar button {
-        font-size: 16px;
-        padding-top: 7px;
-        padding-bottom: 10px;
-    }
+  .head-wrapper {
+    height: 550px;
+  }
+  .tri-search-bar button {
+    font-size: 16px;
+    padding-top: 7px;
+    padding-bottom: 10px;
+  }
 /*    .head-img-wrapper {
         top: 50px;
-    }*/
-}
+        }*/
+      }
 
-@media (min-width: 1100px) {
-    .tri-search-bar button {
-        font-size: 18px;
-        padding-top: 7px;
-        padding-bottom: 10px;
-    }
-}
+      @media (min-width: 1100px) {
+        .tri-search-bar button {
+          font-size: 18px;
+          padding-top: 7px;
+          padding-bottom: 10px;
+        }
+      }
