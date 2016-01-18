@@ -1,0 +1,12 @@
+<h1>Postez votre annonce</h1>
+
+<%= simple_form_for @job, url: jobs_path, method: :post, class: 'form-control' do |f| %>
+  <%= f.input :firm_name, placeholder: 'Le nom de votre entreprise', label: false, input_html: { class: 'form-control right box' } %>
+  <%= f.input :firm_type, placeholder: 'type', label: false, input_html: { class: 'form-control right box' } %>
+  <%= f.input :firm_email, as: :email, placeholder: 'Votre email', label: false, input_html: { class: 'form-control right box' } %>
+  <%= f.input :proposed_job, as: :text, placeholder: 'Job', label: false, input_html: { class: 'form-control right box' }  %>
+  <%= f.input :job_city, as: :text, placeholder: 'Ville', label: false, input_html: { class: 'form-control right box' }  %>
+  <%= f.input :job_start_date, as: :text, placeholder: 'Debut', label: false, input_html: { class: 'form-control right box' }  %>
+  <%= f.input :comment, as: :text, placeholder: 'Dites nous en un peu plus...', label: false, input_html: { class: 'form-control right box' }  %>
+  <%= f.button :submit, 'Envoyer', class: "btn btn-success" %>
+<% end %>

@@ -1,5 +1,5 @@
 class JobsController < ApplicationController
-before_action :set_job, only: [:show, :edit, :update, :destroy]
+  before_action :set_job, only: [:show, :edit, :update, :destroy]
 
   def index
     @job = Job.all
@@ -13,23 +13,24 @@ before_action :set_job, only: [:show, :edit, :update, :destroy]
   end
 
   def create        # POST /jobs
-    @job = Job.new(params[:job])
-    @job.save
-    # Will raise ActiveModel::ForbiddenAttributesError
+    @job = Job.new(job_params)
 
-    # no need for app/views/restaurants/create.html.erb
-    redirect_to job_path(@job)
+    if @job.save
+      redirect_to jobs_path
+    else
+      render :new
+    end
   end
 
   def edit          # GET /jobs/:id/edit
   end
 
   def update        # PATCH /jobs/:id
-    @job.update(params[:job])
+    @job.update(job_params)
     # Will raise ActiveModel::ForbiddenAttributesError
 
     # no need for app/views/jobs/create.html.erb
-    redirect_to job_path(@job)
+    redirect_to jobs_path
   end
 
   def destroy       # DELETE /jobs/:id
@@ -52,7 +53,7 @@ before_action :set_job, only: [:show, :edit, :update, :destroy]
   end
 
   def set_job
-    @job = Job.find(params[:id])
+    @job = Job.find(job_params[:id])
   end
 
 end

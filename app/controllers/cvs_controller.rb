@@ -13,23 +13,23 @@ before_action :set_cv, only: [:show, :edit, :update, :destroy]
   end
 
   def create        # POST /cvs
-    @cv = Cv.new(params[:cv])
-    @cv.save
-    # Will raise ActiveModel::ForbiddenAttributesError
-
-    # no need for app/views/restaurants/create.html.erb
-    redirect_to cv_path(@cv)
+    @cv = Cv.new(cv_params)
+    if @cv.save
+      redirect_to cvs_path
+    else
+      render :new
+    end
   end
 
   def edit          # GET /cvs/:id/edit
   end
 
   def update        # PATCH /cvs/:id
-    @cv.update(params[:cv])
+    @cv.update(cv_params)
     # Will raise ActiveModel::ForbiddenAttributesError
 
     # no need for app/views/cvs/create.html.erb
-    redirect_to cv_path(@cv)
+    redirect_to cvs_path
   end
 
   def destroy       # DELETE /cvs/:id
@@ -52,7 +52,7 @@ before_action :set_cv, only: [:show, :edit, :update, :destroy]
   end
 
   def set_cv
-    @cv = Cv.find(params[:id])
+    @cv = Cv.find(cv_params[:id])
   end
 
 end
