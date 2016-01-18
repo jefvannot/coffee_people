@@ -14,15 +14,15 @@
             <p><%= cv.city %></p>
           </div>
           <div class="card-user">
-          <% if cv.job == 'barista' %>
-            <%= image_tag ('barista_icon.png'), class: 'avatar avatar-bordered job_icon' %>
-          <% end %>
-          <% if cv.job == 'cuisiner' %>
-            <%= image_tag ('cuisiner_icon.png'), class: 'avatar avatar-bordered job_icon' %>
-          <% end %>
-          <% if cv.job == 'patissier' %>
-            <%= image_tag ('patissier_icon.png'), class: 'avatar avatar-bordered job_icon' %>
-          <% end %>
+            <% if cv.job == 'barista' %>
+              <%= image_tag ('barista_icon.png'), class: 'avatar avatar-bordered job_icon' %>
+            <% end %>
+            <% if cv.job == 'cuisinier' %>
+              <%= image_tag ('cuisinier_icon.png'), class: 'avatar avatar-bordered job_icon' %>
+            <% end %>
+            <% if cv.job == 'patissier' %>
+              <%= image_tag ('patissier_icon.png'), class: 'avatar avatar-bordered job_icon' %>
+            <% end %>
           </div>
           <a href="#" class="card-link"></a>
         </div>
